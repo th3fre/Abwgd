@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق VPN السريع - Fast & Secure VPN</title>
+    <!-- استيراد Bootstrap لتصميم احترافي -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; }
+        .hero { background: linear-gradient(135deg, #0d6efd, #0099ff); color: white; padding: 60px 20px; border-radius: 0 0 50px 50px; }
+        .app-logo { width: 120px; border-radius: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); margin-bottom: 20px; }
+        .screenshot-img { width: 100%; max-width: 280px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; margin: 10px; }
+        .btn-download { background: #fff; color: #0d6efd; padding: 15px 40px; font-weight: bold; border-radius: 50px; text-decoration: none; transition: 0.3s; display: inline-block; }
+        .btn-download:hover { background: #e9ecef; transform: scale(1.05); }
+        .lang-btn { cursor: pointer; border: 1px solid #0d6efd; background: white; color: #0d6efd; padding: 5px 15px; border-radius: 5px; margin: 5px; }
+    </style>
+</head>
+<body>
+
+    <!-- تبديل اللغات -->
+    <nav class="p-3 text-center">
+        <button class="lang-btn" onclick="switchLang('ar')">العربية</button>
+        <button class="lang-btn" onclick="switchLang('en')">English</button>
+    </nav>
+
+    <!-- المحتوى العربي -->
+    <div id="content-ar">
+        <header class="hero text-center">
+            <img src="https://play-lh.googleusercontent.com/9P-y_yH7i_0c3YV4y7uT6J3x_7i_0c3YV4y7uT6J3x" class="app-logo" alt="Logo">
+            <h1>احمِ خصوصيتك مع VPN السريع</h1>
+            <p>تصفح الإنترنت بأمان كامل وبسرعة فائقة</p>
+            <a href="https://play.google.com/store/apps/details?id=com.modev.vpn" class="btn-download">تحميل من Google Play</a>
+        </header>
+        <section class="container my-5 text-center">
+            <h2>لقطات التطبيق</h2>
+            <div class="d-flex justify-content-center flex-wrap mt-4">
+                <img src="https://play-lh.googleusercontent.com/g0t6L2jU-W4Yv8g-s1p_q-2-7eI1eU8y5J2-2-7eI1eU8y5J" class="screenshot-img" alt="Screenshot">
+                <img src="https://play-lh.googleusercontent.com/8K5-U3L0-8J0-4Y9x-9Yv-4Y9x-9Yv-4Y9x-9Yv" class="screenshot-img" alt="Screenshot">
+            </div>
+        </section>
+    </div>
+
+    <!-- المحتوى الإنجليزي -->
+    <div id="content-en" style="display:none;" dir="ltr">
+        <header class="hero text-center">
+            <img src="https://play-lh.googleusercontent.com/9P-y_yH7i_0c3YV4y7uT6J3x_7i_0c3YV4y7uT6J3x" class="app-logo" alt="Logo">
+            <h1>Protect Privacy with Fast VPN</h1>
+            <p>Browse the internet with full security and high speed</p>
+            <a href="https://play.google.com/store/apps/details?id=com.modev.vpn" class="btn-download">Download on Google Play</a>
+        </header>
+        <section class="container my-5 text-center">
+            <h2>App Screenshots</h2>
+            <div class="d-flex justify-content-center flex-wrap mt-4">
+                <img src="https://play-lh.googleusercontent.com/g0t6L2jU-W4Yv8g-s1p_q-2-7eI1eU8y5J2-2-7eI1eU8y5J" class="screenshot-img" alt="Screenshot">
+                <img src="https://play-lh.googleusercontent.com/8K5-U3L0-8J0-4Y9x-9Yv-4Y9x-9Yv-4Y9x-9Yv" class="screenshot-img" alt="Screenshot">
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.getElementById('content-ar').style.display = (lang === 'ar') ? 'block' : 'none';
+            document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+        }
+    </script>
+</body>
+</html>
